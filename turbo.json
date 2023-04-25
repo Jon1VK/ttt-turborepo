@@ -9,10 +9,15 @@
       "cache": false
     },
     "dev": {
+      "dependsOn": ["^db:generate"],
       "persistent": true,
       "cache": false
     },
-    "type-check": {},
-    "lint": {}
+    "type-check": {
+      "dependsOn": ["^db:generate"]
+    },
+    "lint": {
+      "dependsOn": ["^db:generate"]
+    }
   }
 }

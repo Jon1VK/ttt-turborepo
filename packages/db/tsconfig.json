@@ -1,0 +1,4 @@
+{
+  "extends": "@ttt/tsconfig/base.json",
+  "files": ["index.ts"]
+}
