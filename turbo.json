@@ -13,6 +13,17 @@
       "persistent": true,
       "cache": false
     },
+    "db:studio": {
+      "dependsOn": ["^db:generate"],
+      "persistent": true,
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:migrate:dev": {
+      "cache": false
+    },
     "type-check": {
       "dependsOn": ["^db:generate"]
     },

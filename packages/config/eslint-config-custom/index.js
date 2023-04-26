@@ -2,6 +2,7 @@ require("@rushstack/eslint-patch/modern-module-resolution");
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
+  env: { es2022: true },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -24,6 +25,6 @@ module.exports = {
     ],
     "@typescript-eslint/consistent-type-imports": 2,
   },
-  ignorePatterns: [".eslintrc.cjs", "*.config.cjs", "*.config.mjs"],
+  ignorePatterns: [".eslintrc.cjs"],
   reportUnusedDisableDirectives: true,
 };

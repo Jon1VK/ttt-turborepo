@@ -1,23 +1,23 @@
 {
-  "name": "@ttt/db",
+  "name": "@ttt/api",
   "private": true,
   "scripts": {
     "clean": "rm -rf .turbo *.tsbuildinfo",
-    "db:studio": "prisma studio",
-    "db:generate": "prisma generate",
-    "db:migrate:dev": "prisma migrate dev",
     "lint": "eslint .",
     "type-check": "tsc"
   },
   "dependencies": {
-    "@prisma/client": "^4.13.0"
+    "@trpc/client": "^10.20.0",
+    "@trpc/next": "^10.21.1",
+    "@trpc/server": "^10.20.0",
+    "@ttt/db": "*",
+    "json-complete": "^2.0.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@ttt/eslint-config-custom": "*",
     "@ttt/tsconfig": "*",
-    "@types/node": "^18.16.0",
     "eslint": "^8.38.0",
-    "prisma": "^4.13.0",
     "typescript": "^5.0.4"
   }
 }
