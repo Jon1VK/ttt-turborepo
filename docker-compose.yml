@@ -1,0 +1,53 @@
+version: "3.8"
+
+services:
+  web:
+    container_name: web
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: development
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/repo
+      - node_modules:/repo/node_modules
+    env_file:
+      - .env
+    depends_on:
+      - db-migrate
+  db-studio:
+    container_name: db-studio
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: db-studio
+    ports:
+      - 5555:5555
+    volumes:
+      - ./:/repo
+      - node_modules:/repo/node_modules
+    env_file:
+      - .env
+    depends_on:
+      - db-migrate
+  db-migrate:
+    container_name: db-migrate
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: db-migrate
+    volumes:
+      - ./:/repo
+      - node_modules:/repo/node_modules
+    env_file:
+      - .env
+    depends_on:
+      - db
+  db:
+    container_name: db
+    image: postgres:14.5-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+volumes:
+  node_modules:

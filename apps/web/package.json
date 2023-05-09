@@ -2,8 +2,10 @@
   "name": "web",
   "private": true,
   "scripts": {
+    "clean": "rm -rf .next .turbo *.tsbuildinfo",
     "dev": "next dev",
-    "lint": "SKIP_ENV_VALIDATION=1 next lint"
+    "lint": "SKIP_ENV_VALIDATION=1 next lint",
+    "type-check": "tsc"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.28.0",

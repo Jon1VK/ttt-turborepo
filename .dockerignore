@@ -1,0 +1,10 @@
+# Ignore all files by default
+*
+
+# Include .npmrc config
+!.npmrc
+
+# Include package.json and package-lock.json files from root and workspace directories
+!**/package*.json
+# But do not include those from node_modules package directories
+node_modules/**/package*.json

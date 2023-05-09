@@ -1,4 +1,4 @@
-import type { AppRouter } from "../server/router";
+import type { AppRouter } from "../index";
 import { transformer } from "../utils/transformer";
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
