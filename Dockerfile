@@ -1,6 +1,6 @@
 FROM node:18-alpine AS base
 RUN apk add --no-cache libc6-compat openssl
-RUN npm install turbo@1.9.3 -g
+RUN npm install turbo@latest -g
 WORKDIR /repo
 COPY ./ ./
 RUN npm install

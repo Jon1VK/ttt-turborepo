@@ -4,7 +4,7 @@
   "packageManager": "npm@9.5.0",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/**/*"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.7"
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "turbo": "^1.9.3"
   }
 }
